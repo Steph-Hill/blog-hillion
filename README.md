@@ -48,9 +48,9 @@ Pour le lancement du server php
 Maintenant se diriger sur le lien proposer pour acceder à l’application web en local :
 - http://127.0.0.1:8000/
 10.	Dans un environement Apple si erreur type :
-dyld[31071]: Library not loaded: @loader_path/../../../../opt/icu4c/lib/libicui18n.73.dylib
-11.	Appliquer ce correctif
-brew reinstall icu4c
+"dyld[31071]: Library not loaded: @loader_path/../../../../opt/icu4c/lib/libicui18n.73.dylib"
+Appliquer ce correctif :
+- brew reinstall icu4c
 
 ## Database seed
 1.	Génération des catégories :
