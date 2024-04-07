@@ -16,43 +16,27 @@ Laravel 11 demande de posséder la version de PHP supérieur ou égal à 8.2, as
 - Node 20.10.0
 
 ## Installation
-
-1. Clonage du dépôt :
-Ouvrez le terminal de votre choix (PowerShell, Invite de Commande, etc.).
-Clonez le dépôt en utilisant la commande suivante :
-- git clone https://github.com/Steph-Hill/blog-hillion.git
-2.	Placer vous dans le dossier:
-Effectuer la commande permettant d’acceder au dossier de l’application :
-- cd nomduprojet
-3. Ouverture du projet 
-Appliquer la commande suivante pour ouvrir le projet avec votre éditeur de code :
-- code .
-4. Installer les dependences de node
-Ouvrez le terminal dans votre editeur de code, appliquer la commande suivante pour installer toutes les dependences avec soit npm ou yarn :
-- npm install
-ou 
-- yarn install
-5. Installer les dépendances PHP et inertia la commande suivante :
-- composer install && composer require inertiajs/inertia-laravel
-6. Ajout du fichier « .env » :
-Dupliquer env.example et renommez-le en « .env ».
-7. Générer une nouvelle clé pour l’application
-- php artisan key:generate
-8. Run migration générer une nouvelle clé pour l'application :
+1.	Clonage du dépôt à l’aide du terminal de votre choix (PowerShell, Invite de Commande, etc...) :
+- git clone https://github.com/Steph-Hill/blog-hillion.git 
+3.	Ouvrir le projet dans votre éditeur de code préféré. 
+4.	Installer les dépendances de Node :
+- npm install ou yarn install 
+5.	Installer les dépendances PHP et la librairie InertiaJS : 
+- composer install && composer require inertiajs/inertia-laravel 
+5.	Dupliquer env.example et renommez-le en « .env ».
+6.	Générer une nouvelle clé pour l’application :
+- php artisan key:generate 
+7.	Génération les migrations de la base de données :
 - php artisan migrate
-9.	Démarrer l’application en exécutant les commandes suivantes à l’aide de deux terminals dans votre editeur de code :
-Pour le lancement du serveur vite
-- npm run dev
-Pour le lancement du server php
-- php artisan serve
-Maintenant se diriger sur le lien proposer pour acceder à l’application web en local :
-- http://127.0.0.1:8000/
-10.	Dans un environement Apple si erreur type :
-"dyld[31071]: Library not loaded: @loader_path/../../../../opt/icu4c/lib/libicui18n.73.dylib"
-Appliquer ce correctif :
-- brew reinstall icu4c
-11. Génération des articles via la commande seed :
-- php artisan db:seed
+8.  Créer le lien storage :
+- php artisan storage:link 
+9.	Générer de fausses données pour remplir la base de données : 
+php artisan db:seed 
+10.	Démarrage de l’application :
+Serveur Vite.js :
+yarn run dev ou npm run dev
+Serveur php pour laravel : php artisan serve
+10.	Dans un environnement Apple si erreur type : "dyld[31071]: Library not loaded: @loader_path/../../../../opt/icu4c/lib/libicui18n.73.dylib", appliquer ce correctif : brew reinstall icu4c
 
 
 
