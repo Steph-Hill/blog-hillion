@@ -32,7 +32,7 @@ Ouvrez le terminal dans votre editeur de code, appliquer la commande suivante po
 - npm install
 ou 
 - yarn install
-5. Installer les dépendances PHP et d'inertia la commande suivante :
+5. Installer les dépendances PHP et inertia la commande suivante :
 - composer install && composer require inertiajs/inertia-laravel
 6. Ajout du fichier « .env » :
 Dupliquer env.example et renommez-le en « .env ».
