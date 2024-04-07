@@ -33,9 +33,9 @@ Laravel 11 demande de posséder la version de PHP supérieur ou égal à 8.2, as
 9.	Générer de fausses données pour remplir la base de données : 
 php artisan db:seed 
 10.	Démarrage de l’application :
-Serveur Vite.js :
+- Serveur Vite.js :
 - yarn run dev ou npm run dev
-Serveur php pour laravel :
+- Serveur php pour laravel :
 - php artisan serve
 11.	Dans un environnement Apple si erreur type : "dyld[31071]: Library not loaded: @loader_path/../../../../opt/icu4c/lib/libicui18n.73.dylib", appliquer ce correctif : brew reinstall icu4c
 
