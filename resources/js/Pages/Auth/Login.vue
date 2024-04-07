@@ -30,12 +30,17 @@ const submit = () => {
 </script>
 
 <template>
+<div v-if="status" class="mb-4 font-medium text-sm text-green-600">
+            {{ status }}
+        </div>
+
     <GuestLayout>
         <Head title="Log in" />
 
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
-        </div>
+        
+        <div v-if="$page.props.flash.message" class="alert float-start">
+        <Notification :message="$page.props.flash.message"/>
+      </div>
 
         <form @submit.prevent="submit">
             <div>

@@ -35,9 +35,11 @@
 
         </div>
         <div class="mb-4">
-            <img :src="form.oldImage" class=" rounded-lg shadow"  />
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Image actuelle : </label>
 
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Ajouter une image : </label>
+            <img :src="form.oldImage" class=" rounded-lg shadow mb-5"  />
+
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Changer l'image : </label>
             <input
                 class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                 aria-describedby="file_input_help" id="file_input" type="file"
@@ -48,7 +50,7 @@
         <button
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit">
-            Créer
+            Modifier
         </button>
     </form>
 
@@ -60,12 +62,13 @@ import { defineProps } from 'vue';
 import NavBlog from '@/Layouts/NavBlog.vue';
 import InputError from '@/Components/InputError.vue';
 
+/* propriété de l'article et de la categorie  et l'image pour la modification de l'article */
 let props = defineProps({
     article: Object,
     categories: Object,
     image: String
 });
-
+/* nouvelle instance de formulaire avec les données de l'article */
 const form = useForm({
     title: props.article.title,
     content: props.article.content,
@@ -74,6 +77,7 @@ const form = useForm({
     category_id: props.article.category_id,
 });
 
+/* fonction pour mettre a jour */
 function updateArticle() {
     router.post(`/article/update/${props.article.id}`, {
         _method: 'put',

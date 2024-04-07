@@ -1,5 +1,6 @@
 <template>
-    <div v-if="$page.props.flash.message" class="alert">
+    <!-- Notification pour afficher un message -->
+    <div v-if="$page.props.flash.message" class="alert float-start">
         <Notification :message="$page.props.flash.message"/>
       </div>
     
