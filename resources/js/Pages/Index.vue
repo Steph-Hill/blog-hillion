@@ -1,7 +1,7 @@
 <template>
     <!-- Navbar du blog -->
     <NavBlog />
-      
+       
     <!-- Affiche une liste d'articles -->
     <div class="flex flex-col pt-8 justify-center items-center " v-for="article in articles.data" :key="article.id">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full">
